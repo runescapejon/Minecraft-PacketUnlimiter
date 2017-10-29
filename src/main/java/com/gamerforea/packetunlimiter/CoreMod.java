@@ -25,10 +25,10 @@ public final class CoreMod implements IFMLLoadingPlugin
 	{
 		Configuration config = new Configuration(new File("config", NAME + ".cfg"));
 		config.load();
-		bigPacketWarning = config.getBoolean("bigPacketWarning", "general", bigPacketWarning, "Включить оповещение при превышении стандартного лимита (2 MB)");
-		readNbtLimit = config.getBoolean("readNbtLimit", "general", readNbtLimit, "Включить ограничение чтения NBT");
-		writeNbtLimit = config.getBoolean("writeNbtLimit", "general", writeNbtLimit, "Включить ограничение записи NBT");
-		unpackNbtLimit = config.getBoolean("unpackNbtLimit", "general", unpackNbtLimit, "Включить ограничение распаковки NBT");
+		bigPacketWarning = config.getBoolean("bigPacketWarning", "general", bigPacketWarning, "Enable notification when the standard limit is exceeded (2 MB)");
+		readNbtLimit = config.getBoolean("readNbtLimit", "general", readNbtLimit, "Enable NBT read restriction");
+		writeNbtLimit = config.getBoolean("writeNbtLimit", "general", writeNbtLimit, "Enable NBT write restriction");
+		unpackNbtLimit = config.getBoolean("unpackNbtLimit", "general", unpackNbtLimit, "Enable NBT Unpacking Restriction");
 		config.save();
 	}
 
